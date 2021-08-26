@@ -1,0 +1,11 @@
+<h1>Editing Book</h1>
+
+<!--<form>-->
+  <%= render 'form', book: @book %>
+<!--</form>-->
+<!--<form>を外すといけたのだけどなんでかはわからない。-->
+<!--メンターさんによると<form>というのはhtmlの要素でそれ自体がrailsでいうところのform_withのような動きをするものらしい。-->
+<!--そしてその中身の要素もある程度決まっていて、今回は全く違う部分テンプレートがはいったことにより挙動がおかしかったとのこと-->
+
+<%= link_to 'Show', @book, class: "show_#{@book.id}" %> |
+<%= link_to 'Back', books_path, class: "back" %>
